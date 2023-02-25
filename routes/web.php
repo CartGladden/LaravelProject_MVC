@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TemplateController;
+use App\Http\Controllers\MemberController;
 use Symfony\Component\HttpFoundation\Request;
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +21,5 @@ Route::get('/', function () {
 });
 
 Route::get('/', [TemplateController::class, 'index']);
+Route::get('/product', [AboutController::class, 'product']);
+Route::get('/team', [MemberController::class, 'team']);
